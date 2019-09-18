@@ -31383,7 +31383,7 @@ function dearmor(input) {
               remainder = line + remainder;
               remainder = _util2.default.removeTrailingSpaces(remainder.replace(/\r/g, ''));
               const parts = remainder.split(reSplit);
-              if (parts.length === 1) {
+              if (parts.length === 0) {
                 throw new Error('Misformed armored text');
               }
               const split = splitChecksum(parts[0].slice(0, -1));
